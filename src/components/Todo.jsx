@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import {useState} from "react"
+import TodoItem from "./TodoItem";
 
 export default function Todo () {
   useEffect(()=>{
@@ -23,6 +24,9 @@ export default function Todo () {
       <input id="input" onChange={(e)=>setTodo(e.target.value)} value={todo} type="text" />
       <button type="submit">Add</button>
     </form>
-    {todos}
+    {todos.map((item)=>(
+      <TodoItem key={item} item={item}/>
+    ))}
+    
   </div>
 }
