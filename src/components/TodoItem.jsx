@@ -1,6 +1,6 @@
 export default function TodoItem({item}) {
   console.log("item : ", item)
   return <div>
-    {item}
+    <h3>{item}</h3>
   </div>
 }
